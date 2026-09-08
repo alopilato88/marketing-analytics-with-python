@@ -1,6 +1,6 @@
-import pandas as pd
-import sklearn as sk
+# Import packages
 import numpy as np
+import pandas as pd
 from sklearn.cluster import KMeans
 
 # Set the seed for reporducibility
@@ -25,3 +25,4 @@ data_cluster["cluster_id"] = model_k_6.labels_
 
 # Look at cluster means
 data_cluster.groupby("cluster_id")["avg_order_size"].mean()
+data_cluster.groupby("cluster_id")["Cust_No"].count()
